@@ -1,0 +1,19 @@
+mixin product-detailed-description(img_src, img_alt, title, list_text_1, list_text_2, list_text_3, list_text_4, list_text_5, list_text_6, list_text_7, list_text_8, list_text_9, list_text_10)
+    .product-detailed-description
+        .product-detailed-description__img-box
+            img(src=img_src, alt=img_salt).product-detailed-description__img
+        .product-detailed-description__text-box
+            .product-detailed-description__title-box
+                <svg class="product-detailed-description__title-box_icon"><use xlink:href="#icon-information"></use></svg>
+                .product-detailed-description__title= title
+            ul.list-2
+                li.list-2__item= list_text_1
+                li.list-2__item= list_text_2
+                li.list-2__item= list_text_3
+                li.list-2__item= list_text_4
+                li.list-2__item= list_text_5
+                li.list-2__item= list_text_6
+                li.list-2__item= list_text_7
+                li.list-2__item= list_text_8
+                li.list-2__item= list_text_9
+                li.list-2__item= list_text_10

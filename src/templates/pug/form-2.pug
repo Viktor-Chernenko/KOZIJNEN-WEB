@@ -1,0 +1,35 @@
+form.form.form-2
+    button.btn-close
+        span.line.line-1
+        span.line.line-2
+    .form-container
+        .title-4 Запрос оферты
+        .text-7 Заполните форму, и мы свяжемся с вами
+
+        .form-box
+            label.form__title Ваше имя
+                input(type="text", name="", required).form__input
+
+        .form-box
+            label.form__title Номер телефона
+                input(type="tel", name="" placeholder='+7', required).form__input.form-tel__input
+                .form__info Пожалуйста укажите номер корректно
+
+        .form-box
+            label.form__title Ваш email
+                input(type="mailto", name="" placeholder='info@gmail.com', required).form__input
+
+        .form-box
+            label.form__title Комментарий
+                textarea(name="text").form__input.form__input_area
+                .form__info Например укажите дополнительные нюансы
+
+        .form-box
+            label.load-file__title
+                input(type='file').load-file__input
+                <svg class="load-file__icon"><use xlink:href="#icon-to-attach-a-file"></use></svg>
+                | Прикрепить файл
+
+        .form-btn-box
+            button(name="", type).btn Запрос оферты
+            .form__info Отправляя запрос Вы соглашаетесь на обработку персональных данных

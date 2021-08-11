@@ -1,0 +1,12 @@
+mixin product-profile(marker, marker_text, img_src, img_alt, text, text_info)
+    .product-profile
+        .product-profile__wrap
+            .marker-box
+                .marker(class=marker)= marker_text
+            a.product-profile__img-box
+                img(src=img_src, alt=img_alt).product-profile__img
+            .product-profile__description
+                .product-profile__text= text
+                .product-profile__info-box
+                    <svg class="product-profile__info-box_icon"><use xlink:href="#icon-information"></use></svg>
+                    .text-5= text_info

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Окна KOZIJNEN
+    link(rel="stylesheet", href="https://necolas.github.io/normalize.css/latest/normalize.css")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="../css/style.css")
+  body
+    .app
+      include ../templates/pug/header
+      
+      .detailed-product-card-container
+        .wrap
+          .top-box
+            .top-box__item
+              include ../templates/pug/ui/nav-strip
+              ul.nav-strip
+                +nav-strip('Главная', '/')
+                +nav-strip('Категория', '/')
+                +nav-strip('Путь до внутренней страницы')
+
+            .top-box__item
+              a(href="#!").link.link-4
+                  span.link-4__icon &lsaquo;
+                  div Вернуться назад
+
+          include ../templates/pug/product-card/detailed-product-card
+          +detailed-product-card('marker_discount', 'акция', 'Оконный профиль Argo Comfort +', '89870', 'bonus_active', 'Экологично.  Гарантия 10 лет', 'Отличается химической стойкостью к щелочам, минеральным маслам, многим кислотам и растворителям.', 'от 7920₽', ' от 9950₽', 'Немецкий профиль (Inoutic)', 'Бусина с двойным остеклением: дополнительная защита от взлома', '5-ти камерный профиль с глубиной конструкции 71мм', 'Двойное остекление - также возможно тройное остекление Uf-Value = 1,2 Вт / м²К', 'Цвет печати может быть выбран стандартно от серого до белого или черного', 'Фитинг с поворотными ножницами в стандартной комплектации')
+      
+          .product-detailed-description-container
+            .title-6 Подробное описание
+            .text-3 Продажи товаров, выполнения работ или оказания услуг, не приводящие к систематическому получению прибыли, предпринимательством не является.
+
+            include ../templates/pug/product-card/product-detailed-description
+            +product-detailed-description('../img/product-card/detailed-description/detailed-description-item_1.jpg', 'Оконный профиль Argo Comfort +', 'Основные характеристики', '5-камерный профиль с глубиной конструкции 71 мм и высотой 73 мм Петли и замки Roto', 'Заводская гарантия:', '10 лет: цвета, профиль;', ' 5 лет: стекло, фурнитура, петли и замки', 'Остекление толщиной до 47 мм: возможность использования высококачественного остекления и звукоизоляции', 'Бусина с двойным остеклением: дополнительная защита от взлома', 'Жесткое, устойчивое строительное окно', 'Оптимальное значение теплоизоляции Uf = 1,2 Вт / мK', 'Профиль изготовлен из высококачественного бессвинцового ПВХ', 'Можно проводить с остановкой')
+        
+          .text-3
+            <svg class="icon text-3_icon"><use xlink:href="#icon-bonus"></use></svg>
+            |Случаи продажи товаров, выполнения работ или оказания услуг, не приводящие к систематическому получению прибыли, предпринимательством не является.
+
+          .text-4 Согласно законодательству Российской Федерации предпринимательство может осуществляться юридическим лицом или непосредственно физическим лицом (индивидуальным предпринимателем) после их регистрации в установленном законом порядке
+
+          .recommend-viewing
+            .title-6 Похожие профили
+
+            .products-container
+              include ../templates/pug/product-card/product-card-min
+              +product-card-min('../img/product-card/product-card_item-1.jpg','Профиль Comfort +', 'Профиль Comfort +', '1 камерный профиль', 'marker_discount', 'акция')
+              +product-card-min('../img/product-card/product-card_item-2.jpg','Профиль Premium luxe', 'Профиль Premium luxe', '3 камерный профиль', 'marker_new', 'новинка')
+              +product-card-min('../img/product-card/product-card_item-3.jpg','Профиль Arcada New  Comfort', 'Профиль Arcada New  Comfort', '5 камерный профиль', '', '')
+              +product-card-min('../img/product-card/product-card_item-4.jpg','Профиль Elegance', 'Профиль Elegance', '2 камерный профиль', '', '')
+              
+          .feedback-form
+            .feedback-form-container
+              .feedback-form__item
+                .icon-box
+                  <svg class="icon"><use xlink:href="#icon-message"></use></svg>
+                .text-box
+                  .title-5 Нет времени разбираться?
+                  .text-7 Заполните форму, и мы свяжемся с вами и ответим на все интересующие Вас вопросы
+              form.form.feedback-form__item
+                .form-box
+                  label.form__title Номер телефона
+                    input(type="tel", name="" placeholder='+7', required).form__input.form-tel__input
+                  .form__info Пожалуйста укажите номер корректно
+                .form-box
+                  button.form-btn.form-tel__btn Задать вопрос
+                  .form__info Отправляя запрос Вы соглашаетесь на обработку персональных данных
+
+
+              
+
+                    
+
+
+      include ../templates/pug/footer

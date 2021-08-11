@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Окна KOZIJNEN
+    link(rel="stylesheet", href="https://necolas.github.io/normalize.css/latest/normalize.css")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="../css/style.css")
+  body
+    .app
+      include ../templates/pug/header
+        
+      .calculator-top
+        .wrap
+          .top-box
+            .top-box__item
+              include ../templates/pug/ui/nav-strip
+              ul.nav-strip
+                +nav-strip('Главная', '/')
+                +nav-strip('Категория', '/')
+                +nav-strip('Путь до внутренней страницы')
+
+            .top-box__item
+              a(href="#!").link.link-4
+                span.link-4__icon &lsaquo;
+                div Вернуться назад
+
+          h1.title-1 Калькулятор стоимости
+
+      .selecting-container
+        .wrap
+          .text-3 01.
+            span Выбрать нужную продукцию для расчета
+
+          .tabs-1
+            include ../templates/pug/ui/tabs-1
+            +tabs-1('Окна ПВХ', '../img/products-categories/windows.png', 'Окна ПВХ')
+            +tabs-1('Двери ПВХ', '../img/products-categories/doors.png', 'Двери ПВХ')
+            +tabs-1('Алюминиевые конструкции', '../img/products-categories/aluminum-products.png', 'Алюминиевые конструкции')
+
+      .selecting-container
+        .wrap
+          .text-3 02.
+            span Выбрать формат и размер
+
+      .selecting-container
+        .wrap
+          .text-3 03.
+            span Выбрать тип профиля
+
+          .product-profile-box
+            include ../templates/pug/product-card/product-profile
+            +product-profile('', '', '../img/product-card/product-card_item-4.jpg', 'Профиль Comfort ++', 'Профиль Comfort ++', 'Инфо')
+            +product-profile('marker_discount', 'акция', '../img/product-card/product-card_item-4.jpg', 'Профиль Comfort ++', 'Профиль Comfort ++', 'Инфо')
+            +product-profile('', '', '../img/product-card/product-card_item-4.jpg', 'Профиль Comfort ++', 'Профиль Comfort ++', 'Инфо')
+            +product-profile('', '', '../img/product-card/product-card_item-4.jpg', 'Профиль Comfort ++', 'Профиль Comfort ++', 'Инфо')
+            
+
+      .selecting-box
+        .wrap
+          .selecting-container
+            .selecting-container__item
+              .text-3 04.
+                span Цвет профиля
+
+              .profile-color
+                .profile-color__img-box
+                  img(src="../img/product-card/profile-color_item_1.jpg", alt="Пример окна")
+                .profile-color-box
+                  .text-7 Варианты цветов RAL
+                  .tabs-color
+                    include ../templates/pug/ui/tabs-color
+                    +tabs-color-item('tabs-color-box_light-grey')
+                    +tabs-color-item('tabs-color-box_dark-gray')
+                    +tabs-color-item('tabs-color-box_black')
+                    +tabs-color-item('tabs-color-box_green')
+                    +tabs-color-item('tabs-color-box_purple')
+                    +tabs-color-item('tabs-color-box_dull-yellow')
+                    +tabs-color-item('tabs-color-box_gray')
+                    +tabs-color-item('tabs-color-box_grey-green')
+
+
+
+            .selecting-container__item
+              .text-3 05.
+                span Дополнительные параметр
+
+              include ../templates/pug/ui/dropdown
+              +dropdown('--- выбор параметра  ---', '--- выбор параметра  ---', '--- выбор параметра  ---', '--- выбор параметра  ---')
+
+      .total-cost
+        .wrap
+          .total-cost-container
+            .total-cost-box
+              <svg class="total-cost__icon"><use xlink:href="#icon-cost"></use></svg>
+              .total-cost-box__text
+                .text-1 Стоимость
+                .title-2 287 920₽
+            .text-5 Расчет является примерным, более точную стоимость можно уточнить у нашего менеджера. Не является публичной офертой
+            .btn Оформить заказ
+
+      .calculator
+        .feedback-form
+              .wrap.wrap_color
+                .feedback-form-container
+                  .feedback-form__item
+                    .icon-box
+                      <svg class="icon"><use xlink:href="#icon-message"></use></svg>
+                    .text-box
+                      .title-5 Нет времени разбираться?
+                      .text-7 Заполните форму, и мы свяжемся с вами и ответим на все интересующие Вас вопросы
+                  form.form.feedback-form__item
+                    .form-box
+                      label.form__title Номер телефона
+                        input(type="tel", name="" placeholder='+7', required).form__input.form-tel__input
+                      .form__info Пожалуйста укажите номер корректно
+                    .form-box
+                      button.form-btn.form-tel__btn Задать вопрос
+                      .form__info Отправляя запрос Вы соглашаетесь на обработку персональных данных
+
+      .form-communication
+        .form-communication-container
+          iframe.form-communication__iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A7f99906abaf21f867f8f8a7c8f46c40a2b8b4fb73d4a684dbec667017e766424&amp;source=constructor" width="100%" height="100%" frameborder="0")
+        .wrap
+          .contact
+            .contact-box
+              .title-4 Связаться с нами
+              .address
+                .address__title Адрес компании
+                .address__text Москва ул. Савина Орлова 20а Офис 7
+              a.phone-number(href="tel:8 800 230-10-20") 8 800 230-10-20
+              .mail-box
+                a.mail-box__link(href="mailto:KwaliProf@gmail.com") KwaliProf@gmail.com
+                .mail-box__text Пишите, ответим на все вопросы
+              button.btn.btn-pop-up Запрос оферты
+                
+
+        
+
+
+
+
+
+      
+
+
+      include ../templates/pug/footer

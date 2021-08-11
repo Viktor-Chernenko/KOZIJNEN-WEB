@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Окна KOZIJNEN
+    link(rel="stylesheet", href="https://necolas.github.io/normalize.css/latest/normalize.css")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="../css/style.css")
+  body
+    .app
+      include ../templates/pug/header
+
+      .contacts-top
+        .wrap
+          .top-box
+            .top-box__item
+              include ../templates/pug/ui/nav-strip
+              ul.nav-strip
+                +nav-strip('Главная', '/')
+                +nav-strip('Категория', '/')
+                +nav-strip('Путь до внутренней страницы')
+
+            .top-box__item
+              a(href="#!").link.link-4
+                span.link-4__icon &lsaquo;
+                div Вернуться назад
+
+          h1.title-1 Контактные данные
+
+      .contacts
+        .contacts-container.wrap
+          .contacts-container__item
+            .contacts-box
+              .contacts-box__item
+                .contacts__text-box
+                  <svg class="contacts-box__icon"><use xlink:href="#icon-phone-number"></use></svg>
+                  a.phone-number(href="tel:8 800 230-10-20") 8 800 230-10-20
+                .mail-box
+                  a.mail-box__link(href="mailto:KwaliProf@gmail.com") KwaliProf@gmail.com
+                  .mail-box__text Пишите, ответим на все вопросы
+              .contacts-box__item
+                .contacts__text-box
+                  <svg class="contacts-box__icon"><use xlink:href="#icon-address"></use></svg>
+                  .address__title Адрес компании
+                .text-base Москва ул. Савина Орлова 20а Офис 7
+
+        .form-communication
+          .form-communication-container
+            iframe.form-communication__iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A7f99906abaf21f867f8f8a7c8f46c40a2b8b4fb73d4a684dbec667017e766424&amp;source=constructor" width="100%" height="100%" frameborder="0")
+          .wrap
+
+          include ../templates/pug/form-2
+
+
+      include ../templates/pug/footer
+      

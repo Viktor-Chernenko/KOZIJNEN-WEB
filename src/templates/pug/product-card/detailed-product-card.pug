@@ -1,0 +1,70 @@
+mixin detailed-product-card(marker, marker_text, name, article_number, bonus, bonus__text, text, price, price_old, list_info_text_1, list_info_text_2, list_info_text_3, list_info_text_4, list_info_text_5, list_info_text_6)
+    .detailed-product-card
+      .detailed-product-card__wrap
+        .detailed-product-card__item
+          .swiper-container.gallery-top
+            .swiper-wrapper
+              a(href="#!").detailed-product-card__img-box.swiper-slide
+                .marker-box
+                  .marker(class=marker)= marker_text
+                img(src='../img/product-card/detailed-product-card_item-1.jpg', alt='Оконный профиль Argo Comfort +').detailed-product-card__img
+              a(href="#!").detailed-product-card__img-box.swiper-slide
+                .marker-box
+                  .marker(class=marker)= marker_text
+                img(src='../img/product-card/detailed-product-card_item-1.jpg', alt='Оконный профиль Argo Comfort +').detailed-product-card__img
+              a(href="#!").detailed-product-card__img-box.swiper-slide
+                .marker-box
+                  .marker(class=marker)= marker_text
+                img(src='../img/product-card/detailed-product-card_item-1.jpg', alt='Оконный профиль Argo Comfort +').detailed-product-card__img
+            .swiper-button-prev
+            .swiper-button-next
+          .swiper-container.gallery-thumbs
+            .detailed-product-card__item.swiper-wrapper
+              a(href="#!").detailed-product-card__img-box.detailed-product-card__img-box_min.swiper-slide
+                img(src='../img/product-card/detailed-product-card_item-1.jpg', alt='Оконный профиль Argo Comfort +').detailed-product-card__img
+              a(href="#!").detailed-product-card__img-box.detailed-product-card__img-box_min.swiper-slide
+                img(src='../img/product-card/detailed-product-card_item-1.jpg', alt='Оконный профиль Argo Comfort +').detailed-product-card__img
+              a(href="#!").detailed-product-card__img-box.detailed-product-card__img-box_min.swiper-slide
+                img(src='../img/product-card/detailed-product-card_item-1.jpg', alt='Оконный профиль Argo Comfort +').detailed-product-card__img
+        .detailed-product-card__item
+          .detailed-product-card__description
+            a(href="#!").title-2= name
+            .article-bonus-box
+              .article
+                .text-5 Артикульный номер
+                .article__number= article_number
+              .bonus(class=bonus)
+                <svg class="bonus__icon"><use xlink:href="#icon-bonus"></use></svg>
+                span.bonus__text= bonus__text
+
+            .text-base= text
+
+            .detailed-product-card-box
+              .price= price
+                .span.price_old= price_old
+
+            ul.list-info
+              li.list-info__item= list_info_text_1
+              li.list-info__item= list_info_text_2
+              li.list-info__item= list_info_text_3
+              li.list-info__item= list_info_text_4
+              li.list-info__item= list_info_text_5
+              li.list-info__item= list_info_text_6
+
+            .product-card-btn-box
+              button.btn.btn-calc
+                <svg class="btn-calc__icon"><use xlink:href="#icon-calculator"></use></svg>
+                | Калькулятор
+              .btn.btn-pop-up Запрос оферты
+              
+          .uploading-doc-box
+            .uploading-doc
+              <svg class="uploading-doc__icon"><use xlink:href="#icon-documentation"></use></svg>
+              .uploading-doc__text Документация Argo Comfort +
+            .uploading-doc
+              <svg class="uploading-doc__icon"><use xlink:href="#icon-documentation"></use></svg>
+              .uploading-doc__text Производственное описание
+
+
+
+            

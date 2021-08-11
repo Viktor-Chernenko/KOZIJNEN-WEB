@@ -1,0 +1,85 @@
+.header-top
+  .wrap.wrap_color
+    .header-top-content
+      .header-top__box
+        a.info-link(href="#!") О компании
+        a.info-link(href="#!") Политика конфиденциальности
+      .header-top__box
+        .social-link(href="#!")
+          a.rating
+            <svg class="rating__icon"><use xlink:href="#icon-rating"></use></svg>
+            .rating__text 9.8
+          .social-link-box
+            a.social-link-box__item(href="#!")
+              <svg class="social-link-box__icon"><use xlink:href="#icon-instagram"></use></svg>
+
+            a.social-link-box__item(href="#!")
+              <svg class="social-link-box__icon"><use xlink:href="#icon-facebook"></use></svg>
+
+header.header
+  .wrap
+    .header-box
+      .header-box__item
+        a(href="./index.html").logo
+          <svg class="logo__icon"><use xlink:href="#icon-logo"></use></svg>
+          .logo__text Производство <br> и изделий из ПВХ
+
+      .header-box__item
+        .mail-box
+          a.mail-box__link(href="mailto:KwaliProf@gmail.com") KwaliProf@gmail.com
+          .mail-box__text Пишите, ответим на все вопросы
+      .header-box__item
+        a.phone-number(href="tel:8 800 230-10-20")
+          span.phone-number__text 8 800 230-10-20
+          .phone-number__icon
+      .header-box__item
+        button.btn.btn-pop-up Запрос оферты
+    
+    .header-container
+      .catalog
+        .catalog__btn-box
+          button.btn.btn_catalog Наша продукция
+            span &lsaquo;
+        .catalog-list
+          .catalog-list__wrap
+            include ../catalog
+            +catalog-item('./img/products-categories/windows.png', 'Окна ПВХ', 'Окна ПВХ')
+            +catalog-item('./img/products-categories/doors.png', 'Двери ПВХ', 'Двери ПВХ')
+            +catalog-item('./img/products-categories/aluminum-products.png', 'Алюминиевые изделия', 'Алюминиевые изделия')
+            +catalog-item('./img/products-categories/rolls.png', 'Ролеты', 'Ролеты')
+            +catalog-item('./img/products-categories/windowsills.png', 'Подоконники', 'Подоконники')
+            +catalog-item('./img/products-categories/grids.png', 'Сетки', 'Сетки')
+            +catalog-item('./img/products-categories/window-blind.png', 'Жаллюзи', 'Жаллюзи')
+            +catalog-item('./img/products-categories/verandas.png', 'Веранды', 'Веранды')
+            +catalog-item('./img/products-categories/stone-ebb.png', 'Отливы', 'Отливы')
+            +catalog-item('./img/products-categories/accessories.png', 'Аксессуары', 'Аксессуары')
+            .catalog__link-box
+              a(href="./pages/calculator.html").catalog-nav-link Калькулятор стоимости
+                span.catalog-nav-link__icon >
+              a(href="./pages/useful-info.html").catalog-nav-link Полезная информация
+                span.catalog-nav-link__icon >
+              a(href="./pages/list-products.html").catalog-nav-link Наши работы
+                span.catalog-nav-link__icon >
+              a(href="./pages/contacts.html").catalog-nav-link Контакты
+                span.catalog-nav-link__icon >
+            button.btn.btn-pop-up Запрос оферты
+
+            .catalog__btn-container
+              button.btn-catalog-close
+                span.line.line-1
+                span.line.line-2
+  
+      nav.nav
+        .nav-container
+          .nav__item
+            a.nav__link(href="./pages/calculator.html")
+              <svg class="nav__icon"><use xlink:href="#icon-calculator"></use></svg>
+              | Калькулятор стоимости
+          .nav__item
+            a.nav__link(href="./pages/useful-info.html") Полезная информация
+          .nav__item
+            a.nav__link(href="./pages/list-products.html") Наши работы
+          .nav__item
+            a.nav__link(href="./pages/contacts.html") Контакты
+          
+                    

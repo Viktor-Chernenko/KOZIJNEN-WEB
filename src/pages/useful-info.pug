@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Окна KOZIJNEN
+    link(rel="stylesheet", href="https://necolas.github.io/normalize.css/latest/normalize.css")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="../css/style.css")
+  body
+    .app
+      include ../templates/pug/header
+      .useful-info-box
+        .wrap
+          .top-box
+            .top-box__item
+              include ../templates/pug/ui/nav-strip
+              ul.nav-strip
+                +nav-strip('Главная', '/')
+                +nav-strip('Категория', '/')
+                +nav-strip('Путь до внутренней страницы')
+
+            .top-box__item
+              a(href="#!").link.link-4
+                span.link-4__icon &lsaquo;
+                div Вернуться назад
+
+          .title-1 Как самому правильно сделать замер? Окна или двери дома
+          .text-1 Монтаж пластиковых окон любой конфигурации и габаритов начинается с тщательных измерений проема. Процедура проводится по определенным правилам. Даже в одинаковых по планировке комнатах окна будут различаться <br> по габаритам.
+        
+      .redes-container
+        .wrap
+          .redes-box
+            .redes-box__img-box
+              img(src="../img/useful-info/useful-info-item_1.jpg", alt="Пример замера").redes-box__img
+
+            .redes-box__description
+              .title-2 01.
+              .title-5 Как померить оконный проем: <br> этап подготовки
+              .text-1 Начало работ – это подготовка правильного инструмента:
+              ul.list-info
+                li.list-info__item пассатижи;
+                li.list-info__item рулетка, телескопическая линейка с высокой <br> точностью замера;
+                li.list-info__item уровень;
+                li.list-info__item стамеска (должна быть затупленной) на 2 см;
+                li.list-info__item молоток;
+                li.list-info__item принадлежности для учета полученных данных.
+
+
+      .useful-info-text-box
+        .wrap
+          .text-1 Замер оконного проема производится со стороны комнаты и снаружи. Полученные данные позволяют определить точную глубину проема. Конструкция окна никогда не бывает меньше наружной части.
+          .text-6 Как определить размеры окна с выступом
+          .text-1 Оконные проемы бывают с «четвертью» и без, нестандартной формы. Для каждого типа действует своя инструкция по измерению величин.
+
+          .important-text.important-text_info
+            .important-text__item.important-text__item_info “
+            .important-text__content.important-text__content_info Чтобы померить оконную конструкцию с выступом «четверть», необходимо помнить, что такой тип проема имеет видимые неровности. Чтобы правильно определить параметры проема (глубину) определяют величину «четверти» с внутренней стороны комнаты и наружной (уличной).
+          .text-1 Ширина самой оконной конструкции измеряется по откосам, расположенным с наружной части. К полученной величине добавляют еще около шести сантиметров, чтобы окно правильно зашло в «четверть». Важно помнить, что ширина рамы пластикового окна не больше ширины внутреннего проема.
+          .text-6 Как определить размеры окна без выступа
+          .text-1 Инструкция по вычислению высоты и ширины:
+          ul.list-info
+            li.list-info__item Определите параметры проемной части. Чтобы узнать ширину, проводят замер вверху и внизу проема (ориентируются на наименьшую величину при расчете).
+            li.list-info__item От полученной ширины отнимают 2-4 см (для пены) с каждой стороны. Полученная величина – ширина будущего <br> стеклопакета.
+    
+      .feedback-form.feedback-form_color
+        .wrap.wrap_color
+          .feedback-form-container
+            .feedback-form__item
+              .icon-box
+                <svg class="icon"><use xlink:href="#icon-message"></use></svg>
+              .text-box
+                .title-5 Мы сделаем замер бесплатно!
+                .text-7 Заполните форму, и мы свяжемся с вами и ответим на все интересующие Вас вопросы
+            form.form.feedback-form__item
+              .form-box
+                label.form__title Номер телефона
+                  input(type="tel", name="" placeholder='+7', required).form__input.form-tel__input
+                .form__info Пожалуйста укажите номер корректно
+              .form-box
+                button.form-btn.form-tel__btn Задать вопрос
+                .form__info Отправляя запрос Вы соглашаетесь на обработку персональных данных
+        
+      .useful-info-element
+        .wrap
+          .text-1 В процессе эксплуатации дефектного окна происходит деформация рамы. Стеклопакет начинает промерзать, появляются щели, через которые холодный воздух, пыль, атмосферные осадки проникают внутрь помещения. Высокая влажность приводит к появлению плесени и грибка, что является причиной возникновения астмы, аллергии.
+      
+      
+      .easy-tip.redes-container.redes-container_right
+        .wrap
+          .redes-box
+            .redes-box__img-box
+                img(src="../img/useful-info/useful-info-item_2.jpg", alt="Пример замера").redes-box__img
+            .redes-box__description
+              .title-2 02.
+              .title-5 Простые советы оконного <br> проектирования
+              .text-1 Выбор внешнего вида окна для дома, офиса определен цветовыми решениями и формой проема. При проектировании учитывают:
+              ul.list-info
+                li.list-info__item ширину наклонно-поворотной створки – от 40 см;
+                li.list-info__item диаметр изгиба полукруглой арки – 52 см;
+                li.list-info__item габариты, форму оконных проемов – зависят от самого <br> проекта здания, обустройства полов.
+
+      .useful-info-text-box.useful-info-text-box_2
+        .wrap
+          .text-6 Основные правила проведения замера
+          .text-1 Замеры для будущего пластикового окна необходимо проводить как с внутренней стороны проема (в помещении), так и снаружи (с улицы). Параметры обоих этих замеров крайне важны для того
+
+          .important-text.important-text_warning
+            .important-text__item.important-text__item_warning !
+            .important-text__content.important-text__content_warning Одним из факторов, который необходимо учитывать при замере, может стать перекос существующего проема, при наличии которого размер окна должен быть увеличен на величину перекоса. 
+          
+          .text-1 Проведение обмера требует:
+          ul.list-info.list-info-number
+            li.list-info__item
+              span.list-info-number_element 1.
+              | Правильного проведения замера параметров проема.
+              
+            li.list-info__item
+              span.list-info-number_element 2.
+              |Точного расчета размеров конструкций (габаритных и внутренних), которые будут изготавливаться.
+              
+            li.list-info__item
+              span.list-info-number_element 3.
+              | Учета размеров подоконника, москитной сетки, отлива.
+          
+          .text-1 Замеры для будущего пластикового окна необходимо проводить как с внутренней стороны проема (в помещении), так и снаружи (с улицы). Параметры обоих этих замеров крайне важны для того
+
+          .text-7 Во время проектирования перегородок для офисов и остекления лоджии следует не забывать о том, что перемещение элементов конструкций через любые двери в квартире должно проходить без проблем. При осуществлении замера в процессе строительства или реконструкции сооружения вес и габаритные размеры должны быть обязательно согласованы с проектом. Окна для нового дома или коттеджа необходимо подбирать с учетом стиля, в котором построено здание.
+
+          .share-container
+            .share__text Сохраните чтобы не потерять
+            .share-box
+              .ya-share2(data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,viber,whatsapp,skype" async="async")
+      
+      .recommend-viewing
+        .wrap
+          .title-6 Рекомендуем посмотреть
+
+          .products-container
+            include ../templates/pug/product-card/product-card-min
+            +product-card-min('../img/product-card/product-card_item-1.jpg','Профиль Comfort +', 'Профиль Comfort +', '1 камерный профиль', 'marker_discount', 'акция')
+            +product-card-min('../img/product-card/product-card_item-2.jpg','Профиль Premium luxe', 'Профиль Premium luxe', '3 камерный профиль', 'marker_new', 'новинка')
+            +product-card-min('../img/product-card/product-card_item-3.jpg','Профиль Arcada New  Comfort', 'Профиль Arcada New  Comfort', '5 камерный профиль', '', '')
+            +product-card-min('../img/product-card/product-card_item-4.jpg','Профиль Elegance', 'Профиль Elegance', '2 камерный профиль', '', '')
+
+
+
+      
+
+
+      include ../templates/pug/footer

@@ -1,0 +1,6 @@
+mixin link-categories(img_src, img_alt, text, title)
+
+    .link-product
+        a(href="#!" title=title).link-product__img-box
+            img.link-product__img(src=img_src, alt=img_alt)
+        a(href="#!" title=title).link-product__text= text
